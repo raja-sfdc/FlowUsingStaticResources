@@ -1,0 +1,19 @@
+<apex:page sidebar="false" showHeader="false" controller="FlowCarsController">
+<table border="0">
+<tr>
+<td valign="top">
+<div style="float: left; width: 500px; padding: 30pm">
+    <flow:interview name="Select_Make_and_Model" interview="{!aFlowCar}"/>
+</div>
+</td>
+<td>
+<div style="float: center; width:600px">
+    <apex:variable var="imageVar" value="{!makeImageName}"/> 
+    <apex:image url="{!URLFOR($Resource.FlowCars, makeImageName)}" rendered="{!showMake}"/> 
+    <apex:variable var="imageVar" value="{!modelImageName}"/> 
+    <apex:image url="{!URLFOR($Resource.FlowCars, modelImageName)}" width="600px" rendered="{!showModel}"/>  
+</div>  
+</td>
+</tr>
+</table>  
+</apex:page>
